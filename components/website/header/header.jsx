@@ -1,13 +1,13 @@
-import styles from "./header.module.less"
+import React from 'react'
+import styles from "./header.less"
 
-const Header = () => {
+const Header = ({ title, subtitle }) => {
 
     return (
         <div className={styles.header}>
-            <h1 className={styles.headerTitle}>I'm Connor, 👋</h1>
+            <h1 className={styles.headerTitle} id="headerTitle">{title}</h1>
             <div className={styles.headerWrapper}>
-                <p className={styles.headerSubtitle}>I'm a software engineer from</p>
-                <img className={styles.unionJack} src="./images/union_jack.png" />
+                <p className={styles.headerSubtitle} id="headerSubtitle">{subtitle}</p>
             </div>
         </div>
     )

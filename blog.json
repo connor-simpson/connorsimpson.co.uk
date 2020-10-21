@@ -1,6 +1,7 @@
 [
     {
-        "title": "Dinguses against the world!",
+        "slug": "example-post",
+        "title": "An example post made with Node.JS",
         "body": "We is killing it!"
     }
 ]
