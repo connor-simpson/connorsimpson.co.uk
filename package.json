@@ -1,62 +1,19 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "connorsimpson.co.uk",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --coverage"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@zeit/next-less": "^1.0.1",
-    "isomorphic-unfetch": "^3.1.0",
-    "jest-enzyme": "^7.1.2",
-    "less": "^3.12.2",
-    "next": "9.5.5",
-    "react": "16.14.0",
-    "react-dom": "16.14.0"
+    "next": "12.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.1",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "babel-jest": "^26.6.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.5",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.6.0",
-    "react-test-renderer": "^16.14.0"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "identity-obj-proxy"
-    },
-    "transform": {
-      "^.+\\.js$": "babel-jest",
-      "^.+\\.mjs$": "babel-jest",
-      "^.+\\.jsx$": "babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "src/node_modules/(?!@sapper)"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "mjs",
-      "svelte"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "src/node_modules"
-    ],
-    "setupFilesAfterEnv": [
-      "./setupTests.js",
-      "@testing-library/jest-dom/extend-expect",
-      "./node_modules/jest-enzyme/lib/index.js"
-    ]
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.8"
   }
 }
