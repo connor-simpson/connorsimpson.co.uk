@@ -16,7 +16,10 @@ const Home = ({repos}) => {
     <Container>
       <Header />
       <Flex>
-        {repos.map( (repo, index) => <Repository key={index} {...repo} />)}
+        {repos.map( (repo, index) => {
+          if(repo.name === 'connorsimpson.co.uk') return
+          return <Repository key={index} {...repo} /> 
+        })}
       </Flex>
     </Container>
     

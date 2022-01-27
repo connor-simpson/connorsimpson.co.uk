@@ -26,6 +26,10 @@ const Container = styled.div`
     }
     &:nth-child(even){
         background: #1a1a1a;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         color: white;
     }
 `
