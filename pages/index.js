@@ -16,7 +16,7 @@ const Home = ({repos}) => {
     <Container>
       <Header />
       <Flex>
-        {repos.map(repo => <Repository {...repo} />)}
+        {repos.map( (repo, index) => <Repository key={index} {...repo} />)}
       </Flex>
     </Container>
     
