@@ -8,7 +8,13 @@ const Container = styled.div`
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     position: relative;
-    flex: 1 1 1px;
+    width: 100%;
+
+
+    @media (min-width: 1200px) {
+        flex: 1 1 21%;
+    }
+    
     h1 {
         font-size: 25px;
         font-weight: bolder;

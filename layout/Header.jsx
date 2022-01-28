@@ -5,17 +5,33 @@ const Head = styled.div`
     border-bottom: 1px solid #1A1A1A;
     border-top: 1px solid #1A1A1A;
     margin-bottom: 30px;
-    margin-top: 50px;
+    margin-top: 20px;
+
+    @media (min-width: 768px) { 
+        margin-top: 30px;
+    }
+
+    @media (min-width: 1200px) {
+        margin-top: 50px;
+    }
 
 `
 
 const Brand = styled.div`
     font-family: 'Flamenco', cursive;
     text-transform: uppercase;
-    font-size: 70px;
+    font-size: 40px;
     font-weight: 100;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+    @media (min-width: 768px) { 
+        font-size: 50px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 70px;
+    }
 `
 
 const Strapline = styled.div`

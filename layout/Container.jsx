@@ -1,8 +1,19 @@
 import styled from "styled-components"
 
 const StyledWrapper = styled.div`
-    width: 1000px;
-    margin: 0 auto;
+    margin: 20px;
+    overflow-x: hidden;
+
+    @media (min-width: 768px) { 
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
 `
 
 const Container = ({ children }) => {
