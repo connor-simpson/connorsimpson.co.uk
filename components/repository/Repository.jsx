@@ -72,7 +72,7 @@ const Repository = ({ name, description, homepage, language, html_url}) => {
         </div>
             
         <GitHub>
-            <Link href={html_url}><a target="_blank"><i class="bi bi-github"></i></a></Link>
+            <Link href={html_url}><a target="_blank"><i className="bi bi-github"></i></a></Link>
         </GitHub>
      
     </Container>
