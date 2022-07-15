@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-const Lead = styled.div`
+const Lead = styled.h1`
   font-family: 'Flamenco', cursive;
   text-align: center;
   margin: 50px;

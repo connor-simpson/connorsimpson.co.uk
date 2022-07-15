@@ -37,10 +37,13 @@ const Brand = styled.div`
 const Strapline = styled.div`
     font-family: 'Flamenco', cursive;
     text-transform: uppercase;
-    display: flex;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 30px;
+    display: none;
+    @media (min-width: 1200px) {
+        display: flex;
+    }
     
     >div {
         padding: 5px 10px;
@@ -50,16 +53,18 @@ const Strapline = styled.div`
         position: relative;
         background: ##FAEACB;
         z-index: 3;
-        &:before {
-            width: 32px;
+       
+         &:before {
+             width: 32px;
             height: 1px;
-            background: #1a1a1a;
-            content: '';
-            position:absolute;
-            right: -32px;
-            top:50%;
+             background: #1a1a1a;
+             content: '';
+             position:absolute;
+             right: -32px;
+             top:50%;
             z-index: 1;
         }
+     
 
         &:nth-child(odd){
             border-top-right-radius: 10px;
@@ -77,7 +82,7 @@ const Strapline = styled.div`
     }
 `
 
-const Header = () => {
+const Header: React.FC = () => {
 
     const name = "Connor Simpson"
 
@@ -97,7 +102,6 @@ const Header = () => {
             <div>Python</div>
             <div>REST</div>
             <div>Graphql</div>
-
         </Strapline>
     </>
 }

@@ -1,10 +1,9 @@
 import styled from "styled-components"
-import Repositories from "../components/repositories"
-import Repository from "../components/repository/Repository"
-import Socials from "../components/socials"
+import Lead from "../components/atoms/Lead/index"
 import Container from "../layout/Container"
 import Header from "../layout/Header"
 import Page from "../layout/Page"
+
 
 const Flex = styled.div`
   display: flex;
@@ -12,21 +11,24 @@ const Flex = styled.div`
   gap: 20px;
 `
 
+const Home: NextPage = ({repos}) => {
 
-const Home = ({repos}) => {
-
-  return <Page>
+  return <Page title="Connor Simpson">
     <Container>
       <Header />
-      <Repositories repos={repos} />
-      <Socials />
-    </Container>
-    
+      <Lead>Blog</Lead>
+      <Lead>Projects</Lead>
+      <Lead>Socials</Lead>
+    </Container>  
   </Page>
 
 }
-
+/*
 export const getServerSideProps = async() => {
+
+
+  console.log(process.env.NOTION_API_KEY)
+
 
   const github = await fetch("https://api.github.com/users/connor-simpson/repos")
   const repos = await github.json()
@@ -41,6 +43,6 @@ export const getServerSideProps = async() => {
     }
   }
 
-}
+}*/
 
 export default Home
