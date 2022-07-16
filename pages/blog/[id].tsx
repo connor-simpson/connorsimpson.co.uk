@@ -14,10 +14,13 @@ type PostType = {
 const databaseId = process.env.NOTION_DATABASE_KEY
 
 const Post: NextPage<PostType> = ({ page, blocks }) => {
+    if(!page){
+        return <p>An error occurred</p>
+    }
     return <Page title="Connor Simpson">
     <Container>
       <Header />
-      <Lead>{page.properties.Name.title[0].plain_text}</Lead>
+      <Lead>{page?.properties?.Name?.title[0]?.plain_text}</Lead>
       {blocks.map(block => {
         return <Block key={block.id} block={block} />
       })}
