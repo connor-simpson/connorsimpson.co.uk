@@ -5,7 +5,9 @@ import Link from "next/link"
 import Button from "../../atoms/Button/Button"
 
 type BlogType = {
-    posts: [any]
+    posts: [any],
+    leadText: string,
+    showActions: boolean
 }
 
 const Wrapper =  styled.div`
@@ -18,9 +20,9 @@ const Actions = styled.div`
     display: flex;
     justify-content: center;
 `
-const Blog: React.FC<BlogType> = ({ posts }) => {
+const Blog: React.FC<BlogType> = ({ leadText, posts, showActions }) => {
     return <>
-        <Lead>Journal</Lead>
+        <Lead>{leadText}</Lead>
         <Wrapper>
             {posts.map(post => {
                 console.log(post)
@@ -42,9 +44,11 @@ const Blog: React.FC<BlogType> = ({ posts }) => {
                 </Petal>
             })}
         </Wrapper>
-        <Actions>
-            <Button>View all posts</Button>
-        </Actions>
+        {showActions && 
+            <Actions>
+                <Button><Link href={`/blog`}><a>View all posts</a></Link></Button>
+            </Actions>
+        }   
     </>
 
 }

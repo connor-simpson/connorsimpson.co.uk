@@ -15,7 +15,7 @@ const Home: NextPage<HomeType> = ({ posts }) => {
   return <Page title="Connor Simpson">
     <Container>
       <Header />
-      <Blog posts={posts} />
+      <Blog leadText={`Journal`} showActions={true} posts={posts} />
     </Container>  
   </Page>
 
