@@ -1,5 +1,3 @@
-import styled from "styled-components"
-import Button from "../components/atoms/Button/Button"
 import Blog from "../components/organisms/Blog"
 import Container from "../layout/Container"
 import Header from "../layout/Header"
