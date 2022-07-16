@@ -5,7 +5,7 @@
     "**/*.tsx",
     "**/*.css",
     "**.*.js"
-  ],
+, "lib/notion.js"  ],
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -26,6 +26,7 @@
     "jsx": "preserve"
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "lib"
   ]
 }

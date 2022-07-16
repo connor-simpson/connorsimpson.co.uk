@@ -1,48 +1,39 @@
 import styled from "styled-components"
-import Lead from "../components/atoms/Lead/index"
+import Button from "../components/atoms/Button/Button"
+import Blog from "../components/organisms/Blog"
 import Container from "../layout/Container"
 import Header from "../layout/Header"
 import Page from "../layout/Page"
+import { getDatabase } from "../lib/notion"
 
+type HomeType = {
+  posts: [any]
+}
 
-const Flex = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-`
+const databaseId = process.env.NOTION_DATABASE_KEY
 
-const Home: NextPage = ({repos}) => {
+const Home: NextPage<HomeType> = ({ posts }) => {
 
   return <Page title="Connor Simpson">
     <Container>
       <Header />
-      <Lead>Blog</Lead>
-      <Lead>Projects</Lead>
-      <Lead>Socials</Lead>
+      <Blog posts={posts} />
     </Container>  
   </Page>
 
 }
-/*
-export const getServerSideProps = async() => {
 
+export const getStaticProps = async () => {
 
-  console.log(process.env.NOTION_API_KEY)
-
-
-  const github = await fetch("https://api.github.com/users/connor-simpson/repos")
-  const repos = await github.json()
-
-  const githubUser = await fetch("https://api.github.com/users/connor-simpson/repos")
-  const user = await githubUser.json()
+  const database = await getDatabase(databaseId)
 
   return {
     props: {
-      repos,
-      user
-    }
+      posts: database
+    },
+    revalidate: 1
   }
 
-}*/
+}
 
 export default Home

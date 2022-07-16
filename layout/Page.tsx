@@ -1,5 +1,4 @@
 import Head from "next/head"
-import styled from "styled-components"
 
 type PageProps = {
     title: string
