@@ -4,7 +4,7 @@ type PetalType = {
     firstAsNew: boolean
 }
 
-const Petal: React.FC<PetalType> = styled.div`
+const Petal = styled.div<PetalType>`
     font-family: 'Flamenco', cursive;
     border: thin solid #1a1a1a;
     padding: 25px 15px;

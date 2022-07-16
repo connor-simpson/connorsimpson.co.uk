@@ -1628,6 +1628,11 @@ node-fetch@^2.6.1:
   dependencies:
     whatwg-url "^5.0.0"
 
+notion-types@^6.12.6:
+  version "6.12.6"
+  resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-6.12.6.tgz#48677bc7f156966bfd95036e9b54d53f1c5b8926"
+  integrity sha512-UBbhnzKgn48SVTkMP5It3heODrf8gAPb6O5vLna9pi9zdAtfSjmGmn5//C0P1rF/ppX7cCfgX964g+8VLUBOag==
+
 object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"

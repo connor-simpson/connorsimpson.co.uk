@@ -4,17 +4,22 @@ import Header from "../../layout/Header"
 import { getPage, getBlocks, getDatabase } from "../../lib/notion"
 import Block from "../../components/atoms/Block"
 import Lead from "../../components/atoms/Lead"
+import type { NextPage } from 'next'
+
+type PostType = {
+    page: any,
+    blocks: any
+}
 
 const databaseId = process.env.NOTION_DATABASE_KEY
 
-const Post: NextPage = ({ page, blocks }) => {
-    console.log(page);
+const Post: NextPage<PostType> = ({ page, blocks }) => {
     return <Page title="Connor Simpson">
     <Container>
       <Header />
       <Lead>{page.properties.Name.title[0].plain_text}</Lead>
       {blocks.map(block => {
-        return <Block block={block} />
+        return <Block key={block.id} block={block} />
       })}
     </Container>  
   </Page>

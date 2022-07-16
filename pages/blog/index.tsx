@@ -4,10 +4,15 @@ import Container from "../../layout/Container"
 import Header from "../../layout/Header"
 import Page from "../../layout/Page"
 import { getDatabase } from "../../lib/notion"
+import type { NextPage } from 'next'
+
+type ArchiveType = {
+    posts: any
+}
 
 const databaseId = process.env.NOTION_DATABASE_KEY
 
-const Archive: NextPage = ({ posts }) => {
+const Archive: NextPage<ArchiveType> = ({ posts }) => {
     return <Page title="Archive | Connor Simpson">
         <Container>
             <Header />

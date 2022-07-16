@@ -2,9 +2,10 @@ import Head from "next/head"
 
 type PageProps = {
     title: string
+    children: JSX.Element
 }
 
-const Page: React.FC<PageProps> = ({title,  children}) => {
+const Page: React.FC<PageProps> = ({title, children}) => {
 
     return <> 
         <Head>

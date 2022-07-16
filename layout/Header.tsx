@@ -89,7 +89,7 @@ const Header: React.FC = () => {
     return <>
         <Head>   
             <Brand>
-                {[...name].map( (letter, index) => <div key={index}>{letter}</div>)}
+                {name.split("").map( (letter, index) => <div key={index}>{letter}</div>)}
             </Brand>
         </Head>
         <Strapline>

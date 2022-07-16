@@ -3,7 +3,7 @@ import Image from "next/image"
 import { CodeBlock, zenburn } from "react-code-blocks"
 
 type BlockType = {
-    block: [any]
+    block: any
 }
 
 const P = styled.p`
@@ -64,7 +64,7 @@ const Block: React.FC<BlockType> = ({ block }) => {
         case "paragraph":
             return <P>{block.paragraph?.text[0]?.plain_text}</P>
         case "image":
-            return <Img><Image src={`${block.image.external.url}`} layout="fill" /></Img>
+            return <Img><Image alt={`Blog image`} src={`${block.image.external.url}`} layout="fill" /></Img>
         case "bulleted_list_item":
         case "numbered_list_item":
             return <ul>

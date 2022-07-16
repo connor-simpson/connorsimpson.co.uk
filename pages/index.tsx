@@ -3,6 +3,7 @@ import Container from "../layout/Container"
 import Header from "../layout/Header"
 import Page from "../layout/Page"
 import { getDatabase } from "../lib/notion"
+import type { NextPage } from 'next'
 
 type HomeType = {
   posts: [any]
