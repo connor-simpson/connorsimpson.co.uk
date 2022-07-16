@@ -25,7 +25,6 @@ const Blog: React.FC<BlogType> = ({ leadText, posts, showActions }) => {
         <Lead>{leadText}</Lead>
         <Wrapper>
             {posts.map(post => {
-                console.log(post)
                 const date = new Date(post.last_edited_time).toLocaleString(
                     "en-GB",
                     {
