@@ -11,8 +11,12 @@ type BlogType = {
 }
 
 const Wrapper =  styled.div`
+    grid-template-columns: 1fr;
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 25px;
     margin-bottom: 25px;
 `
