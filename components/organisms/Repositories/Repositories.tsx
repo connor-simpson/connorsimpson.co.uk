@@ -1,5 +1,6 @@
 import Lead from "../../atoms/Lead"
 import Petal from "../../atoms/Petal"
+import Button from "../../atoms/Button"
 import styled from "styled-components"
 import Link from "next/link"
 
@@ -15,6 +16,29 @@ const Wrapper =  styled.div`
     display: grid;
     gap: 25px;
     margin-bottom: 25px;
+    position: relative;
+    @media (min-width: 768px) {
+        &:before {
+            height:calc(100% + 25px);
+            content: '';
+            width: 1px;
+            position:absolute;
+            background: #1a1a1a;
+            left: 50%;
+            top: 0;
+        }
+
+        &:after {
+            width: 7px;
+            height: 7px;
+            position:absolute;
+            background: #1a1a1a;
+            top: 0px;
+            left: calc(50% - 3px);
+            content: '';
+            border-radius: 10px;
+        }
+    }
 `
 
 const GitHub = styled.div`
@@ -27,6 +51,12 @@ const GitHub = styled.div`
     top: 10px;
 `
 
+const Actions = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+`
+
 const Repositories: React.FunctionComponent<RepositoriesType> = ({ repos }) => {
     return <>
         <Lead>Projects</Lead>
@@ -35,7 +65,7 @@ const Repositories: React.FunctionComponent<RepositoriesType> = ({ repos }) => {
             
             const { homepage, html_url, name, description, language } = repo;
             if(name === 'connorsimpson.co.uk') return;
-            return <Petal key={repo.id}>
+            return <Petal stems={true} key={repo.id}>
                 <h1><Link href={homepage || html_url}><a target="_blank">{name}</a></Link></h1>
 
                 <h2>{description}</h2>
@@ -51,6 +81,9 @@ const Repositories: React.FunctionComponent<RepositoriesType> = ({ repos }) => {
 
         })}
         </Wrapper>
+        <Actions>
+            <Button><Link href={`https://github.com/connor-simpson`}><a target="_blank">View my profile</a></Link></Button>
+        </Actions>
     </>
 }
 

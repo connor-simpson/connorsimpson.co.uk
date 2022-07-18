@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 type PetalType = {
-    firstAsNew: boolean
+    firstAsNew: boolean,
+    stems: boolean
 }
 
 const Petal = styled.div<PetalType>`
@@ -56,8 +57,38 @@ const Petal = styled.div<PetalType>`
             border-bottom-left-radius: 10px;
 
         }
+        ${props =>{ 
+            if(props.stems){
+                return `
+                    &:after {
+                        content: '';
+                        background: #1a1a1a;
+                        height: 1px;
+                        width: 14px;
+                        position: absolute;
+                        top: 70%;
+                        left: -14px;
+                    }
+                `
+            }
+        }}
     }
-
+    ${props =>{ 
+        if(props.stems){
+            return `
+                &:after {
+                    content: '';
+                    background: #1a1a1a;
+                    height: 1px;
+                    width: 14px;
+                    position: absolute;
+                    top: 50%;
+                    right: -14px;
+    
+                }
+            `
+        }
+    }}
     ${props => {
         if(props.firstAsNew){
             return `

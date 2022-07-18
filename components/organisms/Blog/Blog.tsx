@@ -19,6 +19,29 @@ const Wrapper =  styled.div`
     display: grid;
     gap: 25px;
     margin-bottom: 25px;
+    position: relative;
+    @media (min-width: 768px) {
+        &:before {
+            height:calc(100% + 25px);
+            content: '';
+            width: 1px;
+            position:absolute;
+            background: #1a1a1a;
+            left: 50%;
+            top: 0;
+        }
+
+        &:after {
+            width: 7px;
+            height: 7px;
+            position:absolute;
+            background: #1a1a1a;
+            top: 0px;
+            left: calc(50% - 3px);
+            content: '';
+            border-radius: 10px;
+        }
+    }
 `
 const Actions = styled.div`
     display: flex;
@@ -38,7 +61,7 @@ const Blog: React.FC<BlogType> = ({ leadText, posts, showActions }) => {
                     }
                 );
                 
-                return <Petal key={post.id} firstAsNew={true}>
+                return <Petal key={post.id} firstAsNew={true} stems={true}>
                     <h1><Link href={`/blog/${post.id}`}><a>{post.properties.Name.title[0].plain_text}</a></Link></h1>
                     <h2>{post.properties.Excerpt?.rich_text[0]?.plain_text}</h2>
                     <div>
