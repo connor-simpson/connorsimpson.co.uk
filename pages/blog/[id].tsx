@@ -17,13 +17,22 @@ const Post: NextPage<PostType> = ({ page, blocks }) => {
     if(!page){
         return <p>An error occurred</p>
     }
-    return <Page title="Connor Simpson">
+    return <Page title={`${page?.properties?.Name?.title[0]?.plain_text} | Blog | Connor Simpson`}>
     <Container>
       <Header />
       <Lead>{page?.properties?.Name?.title[0]?.plain_text}</Lead>
+      <Lead small={true}>{new Date(page?.last_edited_time).toLocaleString(
+                    "en-GB",
+                    {
+                        month: "long",
+                        day: "2-digit",
+                        year: "numeric",
+                    }
+                )}</Lead>
       {blocks.map(block => {
         return <Block key={block.id} block={block} />
       })}
+      <br /><br /><br /><br />
     </Container>  
   </Page>
 }
