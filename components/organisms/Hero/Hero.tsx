@@ -19,15 +19,18 @@ const randomPhrases = [
     "who likes Lana del Rey.",
     "with too much time on their hands.", 
     "who likes Disaronno and Coke.",
-    "and hotpot is not a stew, it's got a crust.",
+    "and hotpot is not a stew, it&apos;s got a crust.",
     "who prefers Coke over Pepsi.",
     "who thinks &apos;sport&apos; is just another type of Lucozade.",
 ]
 
 const Hero: React.FC = () => {
 
+    const x = true;
 
     return <Wrapper>
+     
+    
         <h1>I'm a software engineer from Manchester, {randomPhrases[Math.floor(Math.random()*randomPhrases.length)]}</h1>
     </Wrapper>
 }
