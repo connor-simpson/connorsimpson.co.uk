@@ -5,6 +5,8 @@ import Page from "../layout/Page"
 import { getDatabase } from "../lib/notion"
 import type { NextPage } from 'next'
 import Repositories from "../components/organisms/Repositories"
+import Social from "../components/organisms/Socials"
+import Hero from "../components/organisms/Hero"
 
 type HomeType = {
   posts: [any],
@@ -18,12 +20,16 @@ const Home: NextPage<HomeType> = ({ posts, repos }) => {
   return <Page title="Connor Simpson">
     <Container>
       <Header />
+      <Hero />
       <Blog leadText={`Journal`} showActions={true} posts={posts} />
       <Repositories repos={repos} />
+      <Social />
     </Container>  
   </Page>
 
 }
+
+
 
 export const getStaticProps = async () => {
 
