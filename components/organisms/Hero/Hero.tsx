@@ -13,15 +13,15 @@ const Wrapper = styled.div`
 const randomPhrases = [
     "with an acute addiction to coffee.",
     "and an Akali main on League of Legends.",
-    "and I hit platinum in League of Legends in 2022",
+    "and I hit platinum in League of Legends in 2022.",
     "and a Jett main on Valorant.",
     "and I tweet too much.",
     "who likes Lana del Rey.",
     "with too much time on their hands.", 
     "who likes Disaronno and Coke.",
-    "and hotpot is not a stew, it&apos;s got a crust.",
+    "and hotpot is not a stew, it's got a crust.",
     "who prefers Coke over Pepsi.",
-    "who thinks &apos;sport&apos; is just another type of Lucozade.",
+    "who thinks 'sport' is just another type of Lucozade.",
 ]
 
 const Hero: React.FC = () => {
