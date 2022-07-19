@@ -21,7 +21,7 @@ const randomPhrases = [
     "who likes Disaronno and Coke.",
     "and hotpot is not a stew, it's got a crust.",
     "who prefers Coke over Pepsi.",
-    "who thinks 'sport' is just another type of Lucozade.",
+    "who thinks &apos;sport&apos; is just another type of Lucozade.",
 ]
 
 const Hero: React.FC = () => {
