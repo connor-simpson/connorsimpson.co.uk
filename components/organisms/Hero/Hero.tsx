@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
     return <Wrapper>
      
     
-        <h1>I'm a software engineer from Manchester, {randomPhrases[Math.floor(Math.random()*randomPhrases.length)]}</h1>
+        <h1>I&apos;m a software engineer from Manchester, {randomPhrases[Math.floor(Math.random()*randomPhrases.length)]}</h1>
     </Wrapper>
 }
 
